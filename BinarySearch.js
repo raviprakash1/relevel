@@ -30,4 +30,4 @@ function binarySearch(arr,key)
 
 let arr = [1,2,3,4,5,6,7];
 let key = 30;
-binarySearch(arr,key);
+binarySearch(arr,key);//
