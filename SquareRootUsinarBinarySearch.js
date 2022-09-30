@@ -1,5 +1,5 @@
 // We need to find Squre of 5
-function squareRoot(number, precision)// 1,2,3,4,5
+function squareRoot(number, precision)
 {
     let start = 0;//0
     let end = number;//5
@@ -8,7 +8,7 @@ function squareRoot(number, precision)// 1,2,3,4,5
 
     while(start <= end)
     {
-        mid = Math.floor((start + end)/2);//2.5
+        mid = Math.floor((start + end)/2);
 
         if(mid * mid == number)//6.25 == 5 false
         {
@@ -16,20 +16,20 @@ function squareRoot(number, precision)// 1,2,3,4,5
             break;
         }
 
-        if (mid * mid < number) { //6.25 < 5
+        if (mid * mid < number) { 
             start = mid + 1;
             ans = mid;
         }
         else{
-            end = mid - 1;// go left
+            end = mid - 1;
         }
 
     }
 
     let increament = 0.1; //ans - 3.1 * 3.1 < =10
-    for(let i =0; i < precision; i++)//precision-> Till what decimal I want to see the value
+    for(let i =0; i < precision; i++)
     {
-        while(ans * ans <= number)//4<=5
+        while(ans * ans <= number)
         {
             ans = ans + increament;
         }
